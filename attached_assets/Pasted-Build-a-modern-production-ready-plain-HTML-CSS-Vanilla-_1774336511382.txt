@@ -1,0 +1,407 @@
+Build a modern, production-ready plain HTML + CSS + Vanilla JavaScript multi-page website (no frameworks, no build tools) for OSIS (One Spirit Integrated Services) — Nigeria's exclusive distributor of the BNC Challenger S110 electric bike and a supplier of vehicle tires.
+
+📁 File Structure
+osis-website/
+├── index.html
+├── about.html
+├── contact.html
+├── css/
+│   └── style.css
+├── js/
+│   └── main.js
+└── images/
+    ├── logo.jpeg
+    ├── hero-bike.jpeg
+    ├── bike-green.jpeg
+    ├── bike-black.jpeg
+    ├── bike-blue.jpeg
+    ├── bike-red.jpeg
+    ├── bike-rear.jpeg
+    ├── bike-colors.jpeg
+    ├── real-1.jpeg
+    ├── real-2.jpeg
+    ├── real-3.jpeg
+    ├── real-4.jpeg
+    ├── real-5.jpeg
+    └── showroom.jpeg
+Image mapping — the following uploaded images should be saved into the images/ folder with these filenames:
+
+logo.jpeg — the OSIS logo (OS emblem, "One Spirit Integrated Services Limited", "Keep Your Spirits Up!")
+hero-bike.jpeg — the dramatic dark/smoky "CHALLENGE The Status Quo" render (red bike on dark background)
+bike-green.jpeg — Commando Green color variant (clean side profile on grey background)
+bike-black.jpeg — Panther Black color variant
+bike-blue.jpeg — Azure Blue color variant
+bike-red.jpeg — Crimson Red color variant
+bike-rear.jpeg — rear 3/4 angle product shot (grey/red bike on white background)
+bike-colors.jpeg — the 4-color grid showing all variants
+real-1.jpeg — woman in traditional dress sitting on blue BNC bike in front of building
+real-2.jpeg — showroom interior with multiple BNC bikes lined up, BNC branding on walls
+real-3.jpeg — two men inspecting a blue BNC bike outdoors (warehouse/Lagos setting)
+real-4.jpeg — blue BNC bike being assembled/charged on floor
+real-5.jpeg — three riders posed with bikes on mountain road
+
+
+🎨 Design Direction
+Color palette (derived from the OSIS logo and BNC brand):
+
+Primary background: #0d0d1a (very dark navy/black)
+Secondary background: #13132a
+Accent color: #4f46e5 (indigo/electric blue — matches the OSIS logo's blue-purple tones)
+Accent hover: #6366f1
+White text: #f8f8ff
+Muted text: #9ca3af
+Border/divider: rgba(79, 70, 229, 0.3)
+
+Typography — import from Google Fonts:
+
+Rajdhani (600, 700) — headings (bold, angular, suits the EV/tech brand)
+Inter (400, 500) — body text
+
+Global rules:
+
+html { scroll-behavior: smooth; }
+All pages share the same style.css and main.js
+Fade-in-up animations via IntersectionObserver
+Mobile-first responsive (breakpoints: 768px, 1024px)
+No external CSS frameworks — pure custom CSS only
+
+
+🧭 Navbar (shared across all pages)
+
+Fixed/sticky, full width
+Logo: use images/logo.jpeg — display at max height 50px, maintain aspect ratio
+Nav links: Home, Products, Services, About, Contact
+
+Home → index.html
+Products → index.html#products
+Services → index.html#services
+About → about.html
+Contact → contact.html
+
+
+On scroll: add dark background + backdrop-filter: blur(12px)
+Active page link highlighted in accent color
+Mobile: hamburger menu (☰) toggle
+
+WhatsApp floating button (all pages):
+
+Fixed bottom-right, green circle with WhatsApp SVG icon
+href="https://wa.me/2340000000000" target="_blank"
+Pulse animation ring effect
+Tooltip: "Chat on WhatsApp"
+
+
+📄 PAGE 1: index.html (Home)
+
+Hero Section
+
+Full viewport height (100vh)
+Background: images/hero-bike.jpeg — the dramatic dark smoky render — with a dark overlay (rgba(10,10,20,0.65))
+Content centered:
+
+Small pill badge: 🇳🇬 Nigeria's Exclusive Distributor
+H1 (Rajdhani, very large, white): "Challenge The Status Quo."
+Subtext: "Meet the BNC Challenger S110 — Nigeria's most revolutionary electric bike. Sustainable. Powerful. Built for Africa."
+CTA buttons:
+
+"Explore the S110" → scrolls to #products (solid indigo)
+"Get In Touch" → links to contact.html (outline style)
+
+
+
+
+Animated fade-in-up on load (CSS keyframes)
+
+
+Stats Bar
+Full-width section, dark card:
+
+⚡ Exclusive Distributor — BNC Challenger S110
+🌍 Nationwide Delivery — All 36 States + FCT
+🛠️ Full After-Sales Support
+🏆 Fleet & Individual Solutions
+
+
+Products Section (id="products")
+Heading: "Our Products"
+Subheading: "Innovative solutions for modern Nigerian mobility"
+Product Card 1 — BNC Challenger S110 Electric Bike
+This card should be more detailed/prominent than Card 2:
+
+Hero image: images/bike-red.jpeg (full width top of card)
+Badge: "⭐ Flagship Product"
+Title: BNC Challenger S110
+Tagline: "Challenge The Status Quo"
+Description: "Experience the perfect blend of style, efficiency, and cutting-edge technology with Nigeria's most advanced electric bike. Designed for urban commuters and off-road enthusiasts alike."
+Features (✅ list):
+
+Zero Emissions — Eco-friendly & clean
+Powerful Electric Motor
+Low Running & Maintenance Cost
+Urban & Rural Ready
+Available in 4 Bold Colors
+
+
+Color picker row (visual only, not interactive): show 4 small colored circles with labels below — Commando Green (#6b7c5c), Panther Black (#1a1a1a), Azure Blue (#2563eb), Crimson Red (#dc2626)
+CTA: "Enquire Now" → contact.html
+
+Product Card 2 — Vehicle Tires
+
+Image: use https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800
+Badge: "Also Available"
+Title: Vehicle Tires
+Description: "A wide range of durable, high-quality tires from globally trusted manufacturers. Serving private vehicles and commercial fleets nationwide."
+Features: Premium Brands, Fleet Supply, Safety-Certified, Competitive Pricing
+CTA: "Enquire Now" → contact.html
+
+
+Color Showcase Section
+Heading: "Choose Your Color"
+Subheading: "The BNC Challenger S110 comes in 4 bold variants"
+4-column image grid (2x2 on mobile):
+
+images/bike-green.jpeg — label: "Commando Green" + tagline: "The color of youth and growth"
+images/bike-black.jpeg — label: "Panther Black" + tagline: "It's My Happy Color"
+images/bike-blue.jpeg — label: "Azure Blue" + tagline: "I'm a blue sky thinker"
+images/bike-red.jpeg — label: "Crimson Red" + tagline: "It's a picker-upper"
+
+Each image: object-fit cover, hover zoom effect (scale 1.05), dark gradient overlay at bottom with the color name
+
+Services Section (id="services")
+Heading: "What We Offer"
+6 service cards (3-col grid → 2-col tablet → 1-col mobile):
+
+🔋 Electric Bike Sales
+🚗 Tire Sales & Distribution
+🛠️ After-Sales Support
+💬 Consultation Services
+🚚 Delivery Services
+🤝 Fleet Solutions
+
+(Use same descriptions as previous prompt)
+
+Gallery / Real Life Section
+Heading: "The S110 in Action"
+Subheading: "Trusted by Nigerians across the country"
+Masonry-style or CSS grid gallery using real photos:
+
+images/real-1.jpeg
+images/real-2.jpeg
+images/real-3.jpeg
+images/real-4.jpeg
+images/real-5.jpeg
+
+All images: rounded corners, hover overlay with slight zoom, object-fit cover
+
+CTA Banner
+Full-width dark banner with indigo gradient background:
+
+Heading: "Ready to Ride the Future?"
+Subtext: "Join hundreds of Nigerians already making the switch to electric mobility."
+Button: "Order Your S110 Today" → contact.html
+
+
+Footer (shared across all pages)
+
+Dark background #080814, indigo top border (2px)
+3-column layout:
+
+Col 1: images/logo.jpeg (height 60px) + tagline "Keep Your Spirits Up!" + "Driving Nigeria's Green Future"
+Col 2: Quick Links — Home, Products, Services, About, Contact
+Col 3: Contact info snippet + social icons (Facebook, Instagram, Twitter/X, LinkedIn — all href="#")
+
+
+Bottom: © 2025 One Spirit Integrated Services Limited. All Rights Reserved.
+Small text: "Exclusive distributor of the BNC Challenger S110 in Nigeria."
+
+
+📄 PAGE 2: about.html
+
+About Hero
+
+Half-height hero (60vh)
+Background: images/real-2.jpeg (showroom photo) with dark overlay
+Centered text:
+
+Breadcrumb: Home > About
+H1: "About OSIS"
+Subtext: "Nigeria's pioneer in sustainable electric mobility"
+
+
+
+
+Our Story Section
+Two-column layout (text left, image right):
+Left:
+
+Label: "WHO WE ARE"
+Heading: "One Spirit. One Mission."
+Body:
+
+One Spirit Integrated Services (OSIS) is a forward-thinking company committed to driving innovation in Nigeria's transportation and mobility sector. As the sole distributor of the BNC Challenger S110 electric bike and a trusted supplier of vehicle tires, OSIS is setting new benchmarks in sustainable and reliable transport solutions.
+With partnerships extending to reputable global manufacturers, OSIS has earned recognition for its dedication to quality, environmental responsibility, and excellent customer service. Our Lagos headquarters serves as a central hub for nationwide logistics, customer support, and business operations.
+
+
+Value tags (pill style): ✅ Quality · 🌱 Sustainability · 💡 Innovation · 🤝 Integrity
+
+Right: images/real-3.jpeg (men inspecting bike — Lagos warehouse scene) with rounded corners + indigo glow border
+
+Mission & Vision Cards
+Two side-by-side cards:
+Mission:
+
+"To provide high-quality electric bikes and vehicle tires that deliver exceptional performance, reliability, and environmental benefits to individuals and businesses across Nigeria — empowering people to make greener choices."
+
+Vision:
+
+"To become Nigeria's leading force in sustainable transportation, transforming how people commute through innovative, eco-friendly, and cost-effective mobility solutions."
+
+Each card: dark bg, indigo left-border accent, large quotation mark decoration
+
+Why Choose OSIS Section
+4-column grid of value cards:
+
+🥇 Exclusive Distributor — We are the only authorized BNC Challenger S110 distributor in Nigeria
+🔧 Expert After-Sales — Our technicians ensure your bike stays performing at its peak
+🚀 Nationwide Reach — We deliver across all 36 states and the FCT
+🌱 Eco-Committed — Every S110 sold is a step toward a greener Nigeria
+
+
+Team Section
+Heading: "Our Team"
+Body: "The OSIS team comprises professionals passionate about sustainable mobility and dedicated to delivering superior customer experiences. From our visionary management to our skilled technicians, we share one goal: revolutionizing transportation in Nigeria."
+3 team placeholder cards:
+
+Circular avatar with colored initials on indigo bg
+Name placeholder, Job title, one-liner
+
+
+Gallery Strip
+A horizontal scrollable strip (or 3-col grid) using:
+
+images/real-1.jpeg
+images/real-4.jpeg
+images/real-5.jpeg
+
+
+Bottom CTA
+"Want to partner with us or learn more about the BNC Challenger S110?"
+Button: "Contact Our Team" → contact.html
+
+📄 PAGE 3: contact.html
+
+Contact Hero
+
+Half-height hero (50vh)
+Background: images/bike-blue.jpeg with dark overlay
+Centered:
+
+Breadcrumb: Home > Contact
+H1: "Get In Touch"
+Subtext: "We'd love to hear from you. Reach out for enquiries, orders, or support."
+
+
+
+
+Contact Body (two-column)
+Left — Contact Details:
+Each item as a styled card row (icon + info):
+
+📍 Address: Lagos, Nigeria (Headquarters)
+📞 Phone: +234 000 000 0000
+✉️ Email: info@osis.ng
+🕐 Hours: Monday – Friday, 8:00am – 6:00pm WAT
+💬 WhatsApp: Click-to-chat button → https://wa.me/2340000000000
+
+Below contact details, show a small image: images/real-3.jpeg (rounded corners)
+Social Media Row:
+Facebook · Instagram · Twitter/X · LinkedIn (icon links, href="#")
+
+Right — Contact Form:
+Form fields:
+
+Full Name (text)
+Email Address (email)
+Phone Number (tel)
+Subject (select):
+
+General Enquiry
+BNC Challenger S110 Order
+Tire Enquiry
+After-Sales Support
+Fleet Solutions
+Other
+
+
+Message (textarea, 6 rows)
+"Send Message" button — solid indigo, full width, hover glow effect
+
+On submit: event.preventDefault() — hide the form, show success state:
+✅ Message Sent!
+Thank you for reaching out. Our team will get back to you within 24 hours.
+Success state styled in a green-bordered card
+All inputs: dark background #13132a, white text, indigo focus glow border
+
+FAQ Section (below the form)
+Heading: "Frequently Asked Questions"
+5 accordion-style FAQ items (click to expand/collapse, JS toggle):
+
+What is the BNC Challenger S110?
+
+The BNC Challenger S110 is a high-performance electric bike designed for urban and off-road use. OSIS is the exclusive distributor of this bike in Nigeria.
+
+
+What colors is the S110 available in?
+
+The S110 is available in four bold colors: Commando Green, Panther Black, Azure Blue, and Crimson Red.
+
+
+Do you deliver nationwide?
+
+Yes! We deliver the BNC Challenger S110 and vehicle tires to all 36 states and the FCT across Nigeria.
+
+
+What after-sales support do you offer?
+
+We provide comprehensive maintenance services, genuine replacement parts, and technical support to keep your bike and tires performing at their best.
+
+
+How can I place an order?
+
+You can reach us via the contact form on this page, call us directly, or message us on WhatsApp. Our team will guide you through the order process.
+
+
+
+
+📄 HTML Meta for all pages
+index.html:
+html<title>OSIS | Nigeria's Electric Mobility Leader</title>
+<meta name="description" content="OSIS is Nigeria's exclusive distributor of the BNC Challenger S110 electric bike. Sustainable, powerful electric mobility solutions nationwide.">
+about.html:
+html<title>About Us | OSIS — One Spirit Integrated Services</title>
+<meta name="description" content="Learn about OSIS — Nigeria's pioneer in electric mobility and exclusive BNC Challenger S110 distributor. Our story, mission, and team.">
+contact.html:
+html<title>Contact Us | OSIS — One Spirit Integrated Services</title>
+<meta name="description" content="Get in touch with OSIS for BNC Challenger S110 orders, tire enquiries, after-sales support, and fleet solutions across Nigeria.">
+All pages:
+html<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="images/logo.jpeg">
+
+⚙️ JavaScript (main.js)
+
+Navbar scroll effect — dark bg + blur on scroll
+Mobile hamburger menu toggle
+IntersectionObserver fade-in — .fade-in-up class elements animate on scroll
+Active nav link — highlight based on current page (window.location.pathname)
+Contact form submit handler — show success state
+FAQ accordion — click to toggle answer visibility with smooth height transition
+Smooth anchor scrolling — handled via CSS
+
+
+🚫 Do NOT
+
+Use Bootstrap, Tailwind, or any CSS framework
+Use React, Vue, or any JS framework
+Add pricing
+Add e-commerce or cart features
+Replace the provided images with Unsplash URLs — use the local images/ folder

@@ -1,0 +1,11 @@
+packages:
+  "framer-motion": "For premium, smooth scroll animations and page transitions"
+  "react-hook-form": "For robust contact form state management"
+  "@hookform/resolvers": "For integrating Zod validation with react-hook-form"
+  "zod": "For contact form schema validation"
+  "clsx": "For conditional class merging"
+  "tailwind-merge": "For conditional class merging"
+
+notes:
+  - No backend API exists; contact form will simulate a successful submission.
+  - All images are served from the /images/ public directory as provided.
