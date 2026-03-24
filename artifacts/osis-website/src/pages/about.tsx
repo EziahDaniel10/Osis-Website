@@ -20,7 +20,7 @@ export default function About() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <FadeIn>
             <div className="flex items-center gap-2 text-sm text-muted-foreground font-medium mb-4 uppercase tracking-widest">
-              <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+              <Link href="/index.html" className="hover:text-primary transition-colors">Home</Link>
               <ChevronRight size={14} />
               <span className="text-white">About</span>
             </div>
@@ -168,7 +168,7 @@ export default function About() {
           <FadeIn>
             <h2 className="text-3xl font-display font-bold text-white uppercase mb-6">Want to partner with us or learn more?</h2>
             <Link 
-              href="/contact"
+              href="/contact.html"
               className="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-display font-bold uppercase tracking-widest hover:bg-primary/90 transition-all rounded-sm shadow-lg shadow-primary/20"
             >
               Contact Our Team

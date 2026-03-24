@@ -37,7 +37,7 @@ export default function Home() {
                 <ChevronRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
               </a>
               <Link 
-                href="/contact"
+                href="/contact.html"
                 className="inline-flex items-center justify-center px-8 py-4 bg-transparent border border-white text-white font-display font-bold uppercase tracking-widest hover:bg-white/10 transition-all rounded-sm"
               >
                 Get In Touch
@@ -125,7 +125,7 @@ export default function Home() {
                       <div className="w-8 h-8 rounded-full bg-[#dc2626] ring-2 ring-offset-2 ring-offset-card ring-transparent hover:ring-white transition-all cursor-crosshair" title="Crimson Red"></div>
                     </div>
                     <Link 
-                      href="/contact"
+                      href="/contact.html"
                       className="inline-flex w-full items-center justify-center px-6 py-4 bg-primary/10 border border-primary text-primary font-display font-bold uppercase tracking-wider hover:bg-primary hover:text-white transition-all rounded-sm"
                     >
                       Enquire Now
@@ -168,7 +168,7 @@ export default function Home() {
 
                   <div className="mt-auto">
                     <Link 
-                      href="/contact"
+                      href="/contact.html"
                       className="inline-flex w-full items-center justify-center px-6 py-4 bg-transparent border border-white/20 text-white font-display font-bold uppercase tracking-wider hover:bg-white/5 transition-all rounded-sm"
                     >
                       Enquire Now
@@ -276,7 +276,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-6xl font-display font-bold text-white uppercase mb-6 drop-shadow-lg">Ready to Ride the Future?</h2>
             <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto font-medium">Join hundreds of Nigerians already making the switch to efficient, sustainable electric mobility.</p>
             <Link 
-              href="/contact"
+              href="/contact.html"
               className="inline-flex items-center justify-center px-10 py-5 bg-white text-primary font-display font-bold uppercase tracking-widest hover:bg-gray-100 hover:scale-105 transition-all rounded-sm shadow-xl"
             >
               Order Your S110 Today

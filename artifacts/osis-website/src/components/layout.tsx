@@ -20,8 +20,8 @@ function Navbar() {
     { name: "Home", href: "/" },
     { name: "Products", href: "/#products" },
     { name: "Services", href: "/#services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "About", href: "/about.html" },
+    { name: "Contact", href: "/contact.html" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -72,7 +72,7 @@ function Navbar() {
               );
             })}
             <Link
-              href="/contact"
+              href="/contact.html"
               className="bg-primary/10 border border-primary text-primary hover:bg-primary hover:text-white px-5 py-2 rounded-sm font-display uppercase tracking-wider text-sm font-bold transition-all"
             >
               Order Now
@@ -131,7 +131,7 @@ function Footer() {
               {['Home', 'Products', 'Services', 'About', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                    href={item === 'Home' ? '/' : item === 'Products' ? '/#products' : item === 'Services' ? '/#services' : `/${item.toLowerCase()}.html`}
                     className="text-muted-foreground hover:text-primary transition-colors flex items-center gap-2"
                   >
                     <span className="w-1.5 h-1.5 bg-primary rounded-full" />
