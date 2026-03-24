@@ -121,7 +121,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Headquarters</h4>
-                    <p className="text-muted-foreground">Lagos, Nigeria</p>
+                    <p className="text-muted-foreground">Plot No. 11, Ground Floor Adebayo Mokuolu Street, Anthony, Lagos.</p>
                   </div>
                 </div>
                 
@@ -131,7 +131,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Phone</h4>
-                    <p className="text-muted-foreground">+234 000 000 0000</p>
+                    <p className="text-muted-foreground">+234 913 940 5455 (Ajit)<br />+234 806 533 6069 (Ola)</p>
                   </div>
                 </div>
                 
@@ -157,7 +157,7 @@ export default function Contact() {
               </div>
 
               <a 
-                href="https://wa.me/2340000000000" 
+                href="https://wa.me/23491394054555" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 bg-[#25D366] text-white font-bold rounded-sm hover:bg-[#20b958] transition-colors mb-10"
