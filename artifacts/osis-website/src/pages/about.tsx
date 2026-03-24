@@ -44,7 +44,7 @@ export default function About() {
                   One Spirit Integrated Services (OSIS) is a forward-thinking company committed to driving innovation in Nigeria's transportation and mobility sector. 
                 </p>
                 <p>
-                  As the sole distributor of the BNC Challenger S110 electric bike and a trusted supplier of vehicle tires, OSIS is setting new benchmarks in sustainable and reliable transport solutions. With partnerships extending to reputable global manufacturers, OSIS has earned recognition for its dedication to quality, environmental responsibility, and excellent customer service.
+                  As the sole distributor of the BNC Challenger S110 electric bike and a supplier of quality riding gear, OSIS is setting new benchmarks in sustainable and reliable transport solutions. With partnerships extending to reputable global manufacturers, OSIS has earned recognition for its dedication to quality, environmental responsibility, and excellent customer service.
                 </p>
                 <p>
                   Our Lagos headquarters serves as a central hub for nationwide logistics, customer support, and business operations.
@@ -80,7 +80,7 @@ export default function About() {
               <span className="absolute -right-8 -top-8 text-9xl text-primary/10 font-serif font-black group-hover:text-primary/20 transition-colors">"</span>
               <h3 className="text-2xl font-display font-bold text-white uppercase mb-6 relative z-10">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed relative z-10 text-lg">
-                To provide high-quality electric bikes and vehicle tires that deliver exceptional performance, reliability, and environmental benefits to individuals and businesses across Nigeria — empowering people to make greener choices.
+                To provide high-quality electric bikes and riding gear that deliver exceptional performance, reliability, and environmental benefits to individuals and businesses across Nigeria — empowering people to make greener choices.
               </p>
             </FadeIn>
             <FadeIn delay={0.2} className="bg-background p-10 rounded-xl border-l-4 border-l-blue-500 relative overflow-hidden group hover:shadow-2xl transition-shadow">

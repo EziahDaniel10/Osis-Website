@@ -135,30 +135,27 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            {/* Product 2 - Tires */}
+            {/* Product 2 - Riding Gear */}
             <FadeIn className="lg:col-span-4 group" delay={0.3}>
               <div className="bg-card rounded-xl border border-border overflow-hidden h-full flex flex-col hover:border-primary/50 transition-colors duration-500 shadow-xl">
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-48 overflow-hidden" style={{background: 'linear-gradient(135deg,#1a1a3e 0%,#2d2d6b 50%,#4f46e5 100%)'}}>
                   <div className="absolute top-4 left-4 z-10 bg-white/10 backdrop-blur-md text-white text-xs font-bold px-3 py-1 rounded-sm uppercase tracking-wider border border-white/20">
                     Also Available
                   </div>
-                  {/* stock image scenic mountain landscape for vehicle tires context */}
-                  <img 
-                    src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=800&fit=crop" 
-                    alt="Vehicle Tires" 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-30">
+                    <svg width="96" height="96" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22C6.5 22 2 17.5 2 12S6.5 2 12 2s10 4.5 10 10-4.5 10-10 10z"/><path d="M12 8v4l3 3"/></svg>
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent"></div>
                 </div>
                 
                 <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-2xl font-display font-bold text-white uppercase mb-4">Vehicle Tires</h3>
+                  <h3 className="text-2xl font-display font-bold text-white uppercase mb-4">Riding Gear &amp; Accessories</h3>
                   <p className="text-muted-foreground mb-6 text-sm leading-relaxed">
-                    A wide range of durable, high-quality tires from globally trusted manufacturers. Serving private vehicles and commercial fleets nationwide.
+                    Stay safe and ride in style. We stock certified helmets, gloves, protective jackets, and essential riding accessories for every S110 owner.
                   </p>
                   
                   <div className="space-y-2 mb-8 text-sm">
-                    {['Premium Brands', 'Fleet Supply', 'Safety-Certified', 'Competitive Pricing'].map(feat => (
+                    {['Certified Helmets', 'Protective Gloves', 'Riding Jackets', 'Safety-Certified Gear'].map(feat => (
                       <div key={feat} className="flex items-center gap-2 text-white/80">
                         <CheckCircle2 size={16} className="text-primary shrink-0" />
                         <span>{feat}</span>
@@ -220,7 +217,7 @@ export default function Home() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { icon: <BatteryCharging size={32} />, title: "Electric Bike Sales", desc: "Premium electric bikes for sustainable commuting." },
-              { icon: <CheckCircle2 size={32} />, title: "Tire Sales & Distribution", desc: "Top-tier vehicle tires for individuals and commercial use." },
+              { icon: <CheckCircle2 size={32} />, title: "Riding Gear & Accessories", desc: "Certified helmets, gloves, and protective gear for every rider." },
               { icon: <Wrench size={32} />, title: "After-Sales Support", desc: "Expert maintenance, servicing, and spare parts." },
               { icon: <HeadphonesIcon size={32} />, title: "Consultation Services", desc: "Guidance on transitioning to electric mobility solutions." },
               { icon: <Truck size={32} />, title: "Delivery Services", desc: "Reliable nationwide delivery across Nigeria." },

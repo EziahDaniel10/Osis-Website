@@ -147,7 +147,7 @@ function Footer() {
             <h4 className="font-display font-bold text-xl mb-6 text-white uppercase tracking-wider">Get In Touch</h4>
             <ul className="space-y-3 text-muted-foreground text-sm mb-6">
               <li>Plot No. 11, Ground Floor Adebayo Mokuolu Street, Anthony, Lagos.</li>
-              <li>info@osis.ng</li>
+              <li>osis@onespiritintegratedservices.com</li>
               <li>+234 913 940 5455</li>
             </ul>
             <div className="flex space-x-4">

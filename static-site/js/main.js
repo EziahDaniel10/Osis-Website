@@ -93,9 +93,27 @@ if (form) {
 
     if (!valid) return;
 
-    // Show success state
-    if (formFields) formFields.style.display = 'none';
-    if (formSuccess) formSuccess.classList.add('show');
+    // Disable button while sending
+    const submitBtn = document.getElementById('submit-btn');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+
+    const data = new FormData(form);
+    fetch('contact.php', { method: 'POST', body: data })
+      .then(r => r.json())
+      .then(res => {
+        if (res.ok) {
+          if (formFields) formFields.style.display = 'none';
+          if (formSuccess) formSuccess.classList.add('show');
+        } else {
+          alert('Sorry, something went wrong. Please email us directly at osis@onespiritintegratedservices.com');
+        }
+      })
+      .catch(() => {
+        alert('Sorry, something went wrong. Please email us directly at osis@onespiritintegratedservices.com');
+      })
+      .finally(() => {
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Send Message'; }
+      });
   });
 }
 

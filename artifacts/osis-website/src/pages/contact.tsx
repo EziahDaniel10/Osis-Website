@@ -49,8 +49,12 @@ export default function Contact() {
   });
 
   const onSubmit = async (data: ContactFormValues) => {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+    if (!res.ok) throw new Error('Submission failed');
     setIsSubmitted(true);
   };
 
@@ -65,7 +69,7 @@ export default function Contact() {
     },
     {
       q: "Do you deliver nationwide?",
-      a: "Yes! We deliver the BNC Challenger S110 and vehicle tires to all 36 states and the FCT across Nigeria."
+      a: "Yes! We deliver the BNC Challenger S110 and riding gear to all 36 states and the FCT across Nigeria."
     },
     {
       q: "What after-sales support do you offer?",
@@ -141,7 +145,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold mb-1">Email</h4>
-                    <p className="text-muted-foreground">info@osis.ng</p>
+                    <p className="text-muted-foreground">osis@onespiritintegratedservices.com</p>
                   </div>
                 </div>
 
@@ -240,7 +244,7 @@ export default function Contact() {
                           <option value="">Select a subject...</option>
                           <option value="General Enquiry">General Enquiry</option>
                           <option value="BNC Challenger S110 Order">BNC Challenger S110 Order</option>
-                          <option value="Tire Enquiry">Tire Enquiry</option>
+                          <option value="Riding Gear Enquiry">Riding Gear Enquiry</option>
                           <option value="After-Sales Support">After-Sales Support</option>
                           <option value="Fleet Solutions">Fleet Solutions</option>
                           <option value="Other">Other</option>
