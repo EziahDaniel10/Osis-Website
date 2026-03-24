@@ -181,6 +181,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Rajdhani', sans-serif; }
 .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; text-align: center; }
 .stat-item { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
 .stat-icon { font-size: 1.75rem; }
+.stat-icon-svg { display: block; margin: 0 auto; }
 .stat-title { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; color: white; letter-spacing: 0.05em; }
 .stat-sub { font-size: 0.75rem; color: var(--text-muted); }
 
