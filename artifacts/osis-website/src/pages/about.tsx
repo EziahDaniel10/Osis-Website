@@ -119,7 +119,7 @@ export default function About() {
       </section>
 
       {/* TEAM */}
-      <section className="py-24 bg-card border-t border-border">
+      {/* <section className="py-24 bg-card border-t border-border">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <FadeIn>
@@ -147,7 +147,7 @@ export default function About() {
             ))}
           </StaggerContainer>
         </div>
-      </section>
+      </section> */}
 
       {/* GALLERY STRIP */}
       <section className="flex flex-col md:flex-row h-64 md:h-80">

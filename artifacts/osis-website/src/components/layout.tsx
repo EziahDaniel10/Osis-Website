@@ -168,8 +168,8 @@ function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>© 2025 One Spirit Integrated Services Limited. All Rights Reserved.</p>
-          <p>Designed for sustainable mobility.</p>
+          <p>© 2026 One Spirit Integrated Services Limited. All Rights Reserved.</p>
+          <p>Exclusive distributor of the BNC Challenger S110 in Nigeria.</p>
         </div>
       </div>
     </footer>
